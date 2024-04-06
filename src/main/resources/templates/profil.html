@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Brugerprofil</title>
+</head>
+<body>
+<h1>Brugerprofil</h1>
+<p>Navn: <span th:text="${bruger.navn}">Navn</span></p>
+<p>Email: <span th:text="${bruger.email}">Email</span></p>
+<a th:href="@{/bruger/rediger}">Rediger Profil</a>
+</body>
+</html>

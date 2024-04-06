@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Rediger Bruger</title>
+</head>
+<body>
+<h1>Rediger Bruger</h1>
+<form th:action="@{/bruger/opdater}" th:object="${bruger}" method="post">
+    <label for="navn">Navn:</label>
+    <input type="text" id="navn" th:field="*{navn}" />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" th:field="*{email}" />
+
+    <button type="submit">Opdater</button>
+</form>
+</body>
+</html>
