@@ -1,12 +1,17 @@
 <!DOCTYPE html>
+<!-- Denne skabelon viser brugerens profil. -->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Brugerprofil</title>
+    <title>Brugerprofil</title> <!-- Titlen på siden vises i browserens titellinje. -->
 </head>
 <body>
 <h1>Brugerprofil</h1>
+<!-- th:text binder server data (Brugerens navn) til HTML elementer, således at det dynamisk kan ændres. -->
 <p>Navn: <span th:text="${bruger.navn}">Navn</span></p>
+<!-- "bruger.navn" er det dataobjekt, der indeholder brugerens navn, som er sendt fra controlleren. -->
 <p>Email: <span th:text="${bruger.email}">Email</span></p>
+<!-- "bruger.email" er det dataobjekt, der indeholder brugerens email, som er sendt fra controlleren. -->
+<!-- Denne link fører til siden, hvor brugeren kan redigere sin profil. -->
 <a th:href="@{/bruger/rediger}">Rediger Profil</a>
 </body>
 </html>

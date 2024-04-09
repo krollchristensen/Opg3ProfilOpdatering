@@ -1,18 +1,25 @@
 <!DOCTYPE html>
+<!-- Denne skabelon indeholder et formular til redigering af brugerens profil. -->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Rediger Bruger</title>
+    <title>Rediger Bruger</title> <!-- Titlen på siden vises i browserens titellinje. -->
 </head>
 <body>
 <h1>Rediger Bruger</h1>
+<!-- Formularen til at indsende opdateringer til brugerens profil. -->
 <form th:action="@{/bruger/opdater}" th:object="${bruger}" method="post">
+    <!-- "th:action" definerer, hvor formulardataene skal sendes hen, når formularen indsendes. -->
     <label for="navn">Navn:</label>
+    <!-- Inputfelt for brugerens navn. "th:field" binder feltet til brugerens navn i modellen. -->
     <input type="text" id="navn" th:field="*{navn}" />
+    <!-- Dette gør, at brugerens nuværende navn vises i inputfeltet. -->
 
     <label for="email">Email:</label>
+    <!-- Inputfelt for brugerens email. "th:field" binder feltet til brugerens email i modellen. -->
     <input type="email" id="email" th:field="*{email}" />
+    <!-- Dette gør, at brugerens nuværende email vises i inputfeltet. -->
 
-    <button type="submit">Opdater</button>
+    <button type="submit">Opdater</button> <!-- Knappen til at indsende formularen. -->
 </form>
 </body>
 </html>
